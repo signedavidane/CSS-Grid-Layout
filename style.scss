@@ -112,11 +112,6 @@ button:hover {
 /* SMARTPHONE max-width 576px */
 
 @media screen and (max-width: 576px) {
-    main {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .grid-container {
         display: grid;
         gap: 12px;
