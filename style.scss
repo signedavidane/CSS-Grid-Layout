@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%; // to disable horizontal scroll
+    overflow-x: hidden; // try without it to see the difference
+}
+
+body {
+    background-color: #9F8787;
+    text-transform: uppercase;
+}
+
+main {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.grid-item {
+    background-color: #E3DAD3;
+    border-radius: 10px;
+    text-align: auto;
+    display: flex; // to center items
+    justify-content: center; // center items on main-axis
+    align-items: center; // center items on cross-axis
+}
+
+.brand { grid-area: brand; height: 70px;}
+.nav { grid-area: nav; }
+.tools { grid-area: tools; }
+.hero-feature { grid-area: hero-feature; height: 120px;}
+.cta { grid-area: cta; }
+.ad { grid-area: ad; }
+.article-feature { grid-area: article-feature; height: 300px; } 
+.listings { grid-area: listing; } 
+.sidebar { grid-area: sidebar; } 
+.footer { grid-area: footer; height: 70px; } 
+
+.grid-container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+        "brand nav nav nav nav nav tools tools"
+        "hero-feature hero-feature hero-feature hero-feature cta cta ad ad"
+        "article-feature article-feature listing listing listing listing sidebar sidebar"
+        "footer footer footer footer footer footer footer footer";
+}
+
+button {
+    text-transform: uppercase;
+    width: 80%;
+    min-width: 200px;
+    height: 55px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #C6B0B0;
+    font-weight: 900;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+}
+
+button:hover {
+    color: #E3DAD3;
+    font-weight: 900;
+    background-color: #9F8787;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+/* TABLET max-width 992px */
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+            "brand nav nav nav nav nav tools tools"
+            "hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature "
+            "cta cta cta cta cta cta cta cta"
+            "article-feature article-feature article-feature article-feature article-feature article-feature ad ad"
+            "listing listing listing listing listing listing listing listing"
+            "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar"
+            "footer footer footer footer footer footer footer footer";
+    }
+
+    .hero-feature {
+        height: 85px;
+    }
+
+    .cta {
+        height: 70px;
+    }
+
+    .ad,
+    .article-feature {
+        height: 170px;
+    }
+
+    .listings {
+        height: 500px;
+    }
+
+    .sidebar {
+        margin-top: 0;
+        height: 70px;
+    }
+}
+
+/* SMARTPHONE max-width 576px */
+
+@media screen and (max-width: 576px) {
+    main {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "brand brand brand"
+            "nav nav tools"
+            "cta cta cta"
+            "article-feature article-feature article-feature"
+            "ad ad ad"
+            "listing listing listing"
+            "footer footer footer";
+    }
+    .brand,
+    nav,
+    .tools {
+        height: 50px;
+    }
+
+    .article-feature,
+    .cta,
+    .ad,
+    footer {
+        height: 80px;
+    }
+
+    .listings {
+        height: 200px;
+    }
+
+    .sidebar,
+    .hero-feature {
+        display: none;
+    }
+
+    button {
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
