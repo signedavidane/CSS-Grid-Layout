@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 100%; /* to disable horizontal scroll */
+  overflow-x: hidden; /* try without it to see the difference */
 }
 
 body {
@@ -20,10 +20,9 @@ main {
 .grid-item {
   background-color: #E3DAD3;
   border-radius: 10px;
-  text-align: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* to center items */
+  justify-content: center; /* center items on main-axis */
+  align-items: center; /* center items on cross-axis */
 }
 
 .brand {
@@ -104,7 +103,7 @@ button:hover {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: "brand nav nav nav nav nav tools tools" "hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature " "cta cta cta cta cta cta cta cta" "article-feature article-feature article-feature article-feature article-feature article-feature ad ad" "listing listing listing listing listing listing listing listing" "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar" "footer footer footer footer footer footer footer footer";
+    grid-template-areas: "brand brand nav nav nav nav tools tools" "hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature " "cta cta cta cta cta cta cta cta" "article-feature article-feature article-feature article-feature article-feature article-feature ad ad" "listing listing listing listing listing listing listing listing" "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar" "footer footer footer footer footer footer footer footer";
   }
   .hero-feature {
     height: 85px;
@@ -122,15 +121,6 @@ button:hover {
   .sidebar {
     margin-top: 0;
     height: 70px;
-  }
-}
-/* 900px */
-@media screen and (max-width: 900px) {
-  .grid-container {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: "brand brand nav nav nav nav tools tools" "hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature " "cta cta cta cta cta cta cta cta" "article-feature article-feature article-feature article-feature article-feature article-feature ad ad" "listing listing listing listing listing listing listing listing" "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar" "footer footer footer footer footer footer footer footer";
   }
 }
 /* SMARTPHONE max-width 576px */
