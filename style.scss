@@ -108,6 +108,24 @@ button:hover {
     }
 }
 
+/* 900px */
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+            "brand brand nav nav nav nav tools tools"
+            "hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature hero-feature "
+            "cta cta cta cta cta cta cta cta"
+            "article-feature article-feature article-feature article-feature article-feature article-feature ad ad"
+            "listing listing listing listing listing listing listing listing"
+            "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar"
+            "footer footer footer footer footer footer footer footer";
+    }   
+}
+
 /* SMARTPHONE max-width 576px */
 
 @media screen and (max-width: 576px) {
@@ -129,6 +147,7 @@ button:hover {
             "listing listing listing"
             "footer footer footer";
     }
+
     .brand,
     nav,
     .tools {
